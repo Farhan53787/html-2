@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Grid Container</title>
+        <style>
+            .grid-item1 {
+                grid-area: header; 
+            }
+            .grid-item2 {
+                grid-area: menu;
+            }
+            .grid-item3 {
+                grid-area: main;
+            }
+            .grid-item4 {
+                grid-area: footer;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'menu menu header header header'
+                    'menu menu main main main'
+                    'menu menu footer footer footer';
+                gap: 10px;
+                background-color: rgb(255, 0, 0);
+                padding: 10px;
+                grid-template-columns: auto auto auto auto auto;
+            }
+            .grid-container div {
+                background-color: rgb(0, 255, 0);
+                padding: 20px;
+                border: 3px solid rgb(245,167,34);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item1">Introduction</div>
+            <div class="grid-item2"><img src="d:\cz22-listing.jpg" , width="350px"></div>
+            <div class="grid-item3">Description</div>
+            <div class="grid-item4">Conclusion</div>
+         </div>
+
+    </body>
+</html>
