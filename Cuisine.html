@@ -14,6 +14,7 @@
                 margin: 100px 125px;
                 border-radius: 50px;
                 font-family: "Comic Sans MS", "Comic Sans", cursive;
+                
             }
             .heading{
                 color:blue;
@@ -31,6 +32,7 @@
             .conclusion {
                 color:rgb(255, 94, 0);
                 background-color:rgb(255, 230, 0);
+                text-align: center;
             }
             .flex-container{
                 display:flex;
@@ -38,6 +40,8 @@
                 width: 400px;
                 background-color:rgb(38, 168, 255);
                 padding: 20px;
+                border-top-left-radius:200cm;
+                border-top-right-radius:200cm;
             }
             .flex-container div{
                 width:400px;
@@ -46,27 +50,59 @@
                 padding:5px;
                 text-align:center;
             }
+            item1 {
+                grid-area:main; 
+            }
+            item2 {
+                grid-area:menu;
+            }   
+            item3{
+                grid-area:footer
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'main main main menu menu'
+                    'footer footer footer footer footer'
+                padding: 10px;
+                grid-template-columns: auto auto auto auto auto;
+            }  
+            .grid-container div {
+                padding: 20px;
+                gap:5px;
+                border: 3px solid rgb(245,167,34);
+                text-align: center;
+            }
+            #topic {
+                background-color:aquamarine;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align:center;
+            }
         </style>
     </head>
 
     
 <body bgcolor="#FAF9F6">
-<header style="background-color:#FAF9F6; border:0px;">    
-  <h1 class="heading">Bangladeshi Cuisine</h1>
+<header style="background-color:#FAF9F6; border:0px;">   
+  
+    <h1 class="heading">Bangladeshi Cuisine</h1>
 
   <div>
     <img src="d:\Spice-exports.jpg" style="width:700px; opacity:0.5; border-radius:50px; position:absolute; left:100px; top:110px;">
-    <p class="description" style="position:relative;">It is mainly based on rice and fish, reflecting the riverine geography  and rich culture. Spicy curries, bhartas, khichuri and hilsa fish are the main attractions here. There is also Mughal influence in biryani and kebabs, and among sweets, Bogra yogurt and pitha-puli are very popular</p>
+    <p class="description" style="position:relative; text-align:center;">It is mainly based on rice and fish, reflecting the riverine geography  and rich culture. Spicy curries, bhartas, khichuri and hilsa fish are the main attractions here. There is also Mughal influence in biryani and kebabs, and among sweets, Bogra yogurt and pitha-puli are very popular</p>
   </div>
 </header>
     <div class="flex-container">
-        <div style="color:grey;", "font-size:30px";><a href="https://www.google.com/search?q=Bangladeshi+Staple+Foods">Daily Foods</a></div>
-        <div style="color:grey;", "font-size:20px";><a href="https://www.google.com/search?q=Bangladeshi+Sweets">Sweets</a></div>
-        <div style="color:grey;", "font-size:20px";><a href="https://www.google.com/search?q=Bangladeshi+Street+Foods">Street Foods</a></div>
+        <div style="color:grey; border-top-left-radius:200cm; font-size:20px;"><a href="https://www.google.com/search?q=Bangladeshi+Staple+Foods">Daily Foods</a></div>
+        <div style="color:grey; font-size:20px;"><a href="https://www.google.com/search?q=Bangladeshi+Sweets">Sweets</a></div>
+        <div style="color:grey;  border-top-right-radius:200cm; font-size:20px;"><a href="https://www.google.com/search?q=Bangladeshi+Street+Foods">Street Foods</a></div>
     </div>
+
+    <div class="grid-container">
+    <div class="main">
  <section id="#Daily Foods">
     <h2 class="sub-heading">Daily Foods</h2>
-    <div>
+    <div style="background-color:greenyellow; width:1000px;">
         <img src="d:\Panta_Ilish.jpg", width="350px">
         <p>
         Daily food in Bangladesh is centered around rice, fish, and lentils, typically accompanied by vegetables and fiery
@@ -77,7 +113,7 @@
 </section>
  <section id="#Sweets">
     <h2 class="sub-heading">Sweets</h2>
-    <div>
+    <div style="background-color:greenyellow; width:1000px;">
         <img src="d:\cz22-listing.jpg" , width="350px">
     <p>
     Bangladeshi cuisine features a rich variety of milk-based and syrup-soaked sweets, with staples including Chomchom, Rasmalai, Mishti Doi (sweet yogurt), and Jilapi.
@@ -86,12 +122,33 @@
 </section>
     <section id="#Street Foods">
     <h2 class="sub-heading">Street Foods</h2>
-    <div>
+    <div style="background-color:greenyellow; width:1000px;">
         <img src="d:\fuchka.webp" , width="350px">
     <p>
         While, its vibrant street food scene features savory, spicy snacks like Fuchka (stuffed pastry with tamarind water), Jhalmuri (spicy puffed rice), and Samosas/Shingara are widely well-known, foreigners are very interested to come to Bangladesh for taking their tastes.
     </p>
     </div>
+    </div>
+
+    <div class="menu">
+    <nav>
+    <h2 class='sub-heading'>Popular Foods</h2>
+    <p id="topic">Daily Foods</p>
+    <ul> Fish With Rice </ul>
+    <ul> Meat With Rice </ul>
+    <ul> Biryani </ul>
+    <p id="topic">Sweets</p>
+    <ul> Fish With Rice </ul>
+    <ul> Meat With Rice </ul>
+    <ul> Biryani </ul>
+    <p id="topic">Street Foods</p>
+    <ul> Fish With Rice </ul>
+    <ul> Meat With Rice </ul>
+    <ul> Biryani </ul>
+    </nav>
+    </div>
+    </div>
+    
 </section>
 </body>
 </header>
@@ -100,4 +157,5 @@
 <p><span>Published By:</span> Farhan Bashir</p>
 <p><span>Date:</span> 09.03.2026</p>
 </footer>
+
 </html>
